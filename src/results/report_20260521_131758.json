@@ -1,9 +1,0 @@
-{
-    "timestamp": "2026-05-21 13:17:58",
-    "target_dir": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Space Marine",
-    "engine": "KiriKiri Engine",
-    "required_programs": [
-        "DirectX 9.0c",
-        "VC++ 2010/2015-2022"
-    ]
-}

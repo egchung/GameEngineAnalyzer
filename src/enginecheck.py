@@ -1,3 +1,18 @@
+"""
+GameEngineAnalyzer
+==================
+이 도구는 지정된 경로의 게임 파일을 분석하여 사용된 게임 엔진을 식별하고,
+해당 엔진 구동에 필요한 필수 런타임 환경(VC++, DirectX 등)을 제안합니다.
+
+Version: 1.0.0
+Description: 자동 게임 엔진 식별 및 필수 런타임 환경 분석기
+Dependencies: pefile (pip install pefile)
+Copyright (c) 2026 egchung
+GitHub: https://github.com/egchung/GameEngineAnalyzer
+MIT License - https://opensource.org/licenses/MIT
+
+"""
+
 import os
 import json
 import pefile
@@ -12,7 +27,14 @@ class GameAnalyzer:
 
         # --- 2. PubCoder (언리얼보다 우선 검사) ---
         {"name": "PubCoder (Interactive Ebook/App)", "pattern": lambda r, f, d: any('pubcoder' in x for x in f) or any('pubreader' in x for x in f), "deps": ["글로벌 런타임 불필요"]},
-        
+      
+        # 3. Unreal Engine (제안받은 통합 패턴 적용)
+        {"name": "Unreal Engine", "pattern": lambda r, f, d: (
+            not any('pubcoder' in x or 'pubreader' in x for x in f) and
+            not any(x.endswith('.rpgmvp') for x in f) and
+            ('binaries' in d and 'engine' in d or any('win64-shipping' in x for x in f))
+        ), "deps": ["VC++ 2015-2022", "DirectX 11/12"]},
+
         # --- 3. 자체 엔진 ---
         {"name": "Joycity Custom Engine", "pattern": lambda r, f, d: 'card_default.pak' in f or 'fs2' in r.lower(), "deps": ["DirectX 9.0c", "VC++ Redistributable"]},
         {"name": "Essence Engine 5.0 (Relic)", "pattern": lambda r, f, d: any(x.endswith('.sga') for x in f) or 'relic' in r.lower() or 'coh3' in r.lower(), "deps": ["DirectX 12", "VC++ 2019/2022"]},
@@ -33,6 +55,7 @@ class GameAnalyzer:
         {"name": "GameMaker Studio", "pattern": lambda r, f, d: 'data.win' in f or 'game.win' in f or any(x.startswith('audiogroup') for x in f), "deps": ["VC++ 2015-2022", "DirectX"]},
         {"name": "Clickteam Fusion", "pattern": lambda r, f, d: 'mmf2' in f or 'kcc' in f, "deps": ["글로벌 런타임 불필요"]},
         {"name": "Ogre3D Engine", "pattern": lambda r, f, d: any('ogre' in x for x in f), "deps": ["DirectX 9.0c", "VC++ 2010/2012/2015"]},
+     #   {"name": "Unreal Engine", "pattern": lambda r, f, d: 'paks' in d and any(x.endswith(('.pak', '.ucas', '.utoc')) for x in f), "deps": ["VC++ 2015-2022", "DirectX 11/12"]},
     ]
 
     def __init__(self, target_dir):
@@ -40,37 +63,23 @@ class GameAnalyzer:
         self.detected_engine = "Unknown"
         self.required_programs = ["확인 불가"]
 
-    def _is_unreal(self, root, files, dirs):
-        # PubCoder/RPG Maker 오탐 차단 안전장치
-        if any('pubcoder' in f.lower() or 'pubreader' in f.lower() for f in files): return False
-        if any(f.endswith('.rpgmvp') for f in files): return False
-        
-        webview_paks = {'resources.pak', 'chrome_100_percent.pak', 'nw_100_percent.pak', 'chrome_200_percent.pak'}
-        if 'paks' in dirs and not any(x in root.lower() for x in ['cef', 'node', 'nw']):
-            return True
-        return any(f.endswith('.pak') and f not in webview_paks for f in files)
-
     def scan_files(self):
         if not os.path.exists(self.target_dir): return False
-        for root, dirs, files in os.walk(self.target_dir):
-            f_l = [f.lower() for f in files]
-            d_l = [d.lower() for d in dirs]
-            
-            # 1. 우선순위 규칙 검사
-            for rule in self.ENGINE_RULES:
+
+        walk_data = list(os.walk(self.target_dir))
+        
+        # 1차: 엔진 규칙 적용 (우선순위 순서대로)
+        for rule in self.ENGINE_RULES:
+            for root, dirs, files in walk_data:
+                f_l, d_l = [f.lower() for f in files], [d.lower() for d in dirs]
                 if rule["pattern"](root, f_l, d_l):
                     self.detected_engine = rule["name"]
                     self.required_programs = rule["deps"]
                     return True
-            
-            # 2. 모든 규칙 통과 못했을 때 마지막으로 언리얼 엔진 확인
-            if self._is_unreal(root, f_l, d_l):
-                self.detected_engine = "Unreal Engine"
-                self.required_programs = ["VC++ 2015-2022", "DirectX 11/12"]
-                return True
-                
-            # 3. PE 검사
-            for f in f_l:
+
+        # 2차: PE 검사
+        for root, _, files in walk_data:
+            for f in files:
                 if f.endswith('.exe') and self.verify_via_pe(os.path.join(root, f)):
                     return True
         return False
