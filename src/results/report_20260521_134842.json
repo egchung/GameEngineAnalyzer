@@ -1,0 +1,9 @@
+{
+    "timestamp": "2026-05-21 13:48:42",
+    "target_dir": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Company of Heroes 3",
+    "engine": "Essence Engine 5.0 (Relic)",
+    "required_programs": [
+        "DirectX 12",
+        "VC++ 2019/2022"
+    ]
+}

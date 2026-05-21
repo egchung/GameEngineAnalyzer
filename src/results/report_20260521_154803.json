@@ -1,0 +1,9 @@
+{
+    "timestamp": "2026-05-21 15:48:03",
+    "target_dir": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Artis",
+    "engine": "Unreal Engine",
+    "required_programs": [
+        "VC++ 2015-2022",
+        "DirectX 11/12"
+    ]
+}

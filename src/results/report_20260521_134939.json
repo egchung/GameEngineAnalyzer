@@ -1,0 +1,9 @@
+{
+    "timestamp": "2026-05-21 13:49:39",
+    "target_dir": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Trine",
+    "engine": "Frozenbyte Engine",
+    "required_programs": [
+        "NVIDIA PhysX",
+        "VC++ 2010/2012/2015-2022"
+    ]
+}
