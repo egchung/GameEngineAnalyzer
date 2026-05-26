@@ -1,9 +1,0 @@
-{
-    "timestamp": "2026-05-22 10:16:32",
-    "target_dir": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\RevueStarlight",
-    "engine": "KiriKiri (Z / TVP) Engine",
-    "required_programs": [
-        "VC++ 2010/2015-2022",
-        "DirectX 9.0c"
-    ]
-}
