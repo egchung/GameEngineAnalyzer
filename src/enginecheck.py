@@ -377,14 +377,8 @@ def main(argv=None):
         if args.batch or (not args.single and is_batch_root(path)):
             run_batch(path, args.output_dir, emit_json)
         else:
-            result = analyze_folder(path)
-            if result["detected"]:
-                run_single(path, args.output_dir, emit_json)
-            else:
-                print_single_result(result)
-                if emit_json:
-                    print("\n[JSON]")
-                    print(json.dumps(result, indent=4, ensure_ascii=False))
+            result, saved = run_single(path, args.output_dir, emit_json)
+            if not result["detected"]:
                 print("\n[알림] 엔진을 식별하지 못했습니다.")
                 sys.exit(1)
     except FileNotFoundError as exc:
