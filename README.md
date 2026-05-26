@@ -40,6 +40,9 @@ python src/enginecheck.py "D:\Games" --batch
 1. [Releases](https://github.com/egchung/GameEngineAnalyzer/releases) 페이지에서 최신 `GameEngineAnalyzer.exe` 파일을 다운로드합니다.
 2. 다운로드한 파일을 실행합니다.
 3. 분석할 게임의 루트 폴더 경로를 입력하면 분석이 시작됩니다.
+4. 분석이 완료되면, GameEngineAnalyzer.exe 실행파일이 있는 폴더에 results폴더가 생성되고, 하위에 *.md 파일이 생성됩니다.
+- 단일 분석 결과는 `results/report_YYYYMMDD_HHMMSS.md`에 저장됩니다.
+- 일괄 분석 결과는 `results/batch_YYYYMMDD_HHMMSS.md`에 저장됩니다.
 
 > **⚠️ 주의사항 (백신 경고)**
 > 본 실행 파일은 직접 빌드(PyInstaller)된 파일이므로, Windows Defender나 일부 백신 프로그램에서 "알 수 없는 게시자"로 인식하여 경고창을 띄울 수 있습니다.
