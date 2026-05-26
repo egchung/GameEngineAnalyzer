@@ -18,6 +18,22 @@
    `pip install pefile` 명령어로 필수 라이브러리를 설치합니다.
 3. `python src/enginecheck.py` 명령어로 실행합니다.
 
+#### 단일 게임 / 설치 라이브러리 일괄 분석
+
+```bash
+# 게임 1개 폴더
+python src/enginecheck.py "D:\Games\Peglin"
+
+# STOVE Games처럼 하위에 게임 폴더가 여러 개인 최상위 경로 (자동 일괄 분석)
+python src/enginecheck.py "D:\EG_ProgramFiles\STOVE_v3\Games"
+
+# 일괄 분석 강제
+python src/enginecheck.py "D:\Games" --batch
+```
+
+- 콘솔에 폴더명·엔진·필수 프로그램을 출력하고, JSON도 함께 표시합니다.
+- 일괄 분석 결과는 `results/batch_YYYYMMDD_HHMMSS.json`에 저장됩니다.
+
 ### 방법 2: 실행 파일(.exe) 사용 (권장)
 별도의 설치 과정 없이 즉시 실행 가능합니다.
 1. [Releases](https://github.com/egchung/GameEngineAnalyzer/releases) 페이지에서 최신 `GameEngineAnalyzer.exe` 파일을 다운로드합니다.

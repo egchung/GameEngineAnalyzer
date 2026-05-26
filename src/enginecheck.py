@@ -15,7 +15,9 @@ MIT License - https://opensource.org/licenses/MIT
 
 import os
 import re
+import sys
 import json
+import argparse
 import pefile
 from datetime import datetime
 
@@ -179,17 +181,186 @@ class GameAnalyzer:
         except: pass
         return False
 
-    def save_report(self):
-        if not os.path.exists("results"): os.makedirs("results")
-        filename = f"results/report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
-        with open(filename, "w", encoding="utf-8") as f:
-            json.dump({"timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"), "target_dir": self.target_dir, "engine": self.detected_engine, "required_programs": self.required_programs}, f, indent=4, ensure_ascii=False)
+    def to_result(self):
+        return {
+            "folder": os.path.basename(self.target_dir),
+            "path": self.target_dir,
+            "engine": self.detected_engine,
+            "required_programs": self.required_programs,
+            "detected": self.detected_engine != "Unknown",
+        }
+
+    def save_report(self, results_dir="results"):
+        os.makedirs(results_dir, exist_ok=True)
+        filename = os.path.join(results_dir, f"report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
+        payload = {
+            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            **self.to_result(),
+        }
+        with open(filename, "w", encoding="utf-8") as handle:
+            json.dump(payload, handle, indent=4, ensure_ascii=False)
         print(f"\n[알림] 분석 보고서가 저장되었습니다: {filename}")
+        return filename
+
+
+def is_batch_root(path):
+    """설치 라이브러리 루트(예: STOVE Games) — 하위 폴더마다 게임이 있는 구조."""
+    if not os.path.isdir(path):
+        return False
+    try:
+        entries = os.listdir(path)
+    except OSError:
+        return False
+    subdirs = [name for name in entries if os.path.isdir(os.path.join(path, name))]
+    if len(subdirs) < 2:
+        return False
+    has_root_exe = any(
+        name.lower().endswith(".exe") and os.path.isfile(os.path.join(path, name))
+        for name in entries
+    )
+    return not has_root_exe
+
+
+def analyze_folder(path):
+    analyzer = GameAnalyzer(path)
+    analyzer.scan_files()
+    return analyzer.to_result()
+
+
+def scan_install_root(root_dir, results_dir="results"):
+    root = os.path.abspath(root_dir.strip().strip('"'))
+    if not os.path.isdir(root):
+        raise FileNotFoundError(f"경로를 찾을 수 없습니다: {root}")
+
+    folder_names = sorted(
+        name for name in os.listdir(root)
+        if os.path.isdir(os.path.join(root, name))
+    )
+
+    games = []
+    total = len(folder_names)
+    for index, name in enumerate(folder_names, 1):
+        game_path = os.path.join(root, name)
+        print(f"[{index}/{total}] {name} ...", flush=True)
+        games.append(analyze_folder(game_path))
+
+    report = {
+        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "root_dir": root,
+        "total": len(games),
+        "games": games,
+    }
+    return report
+
+
+def save_batch_report(report, results_dir="results"):
+    os.makedirs(results_dir, exist_ok=True)
+    filename = os.path.join(
+        results_dir,
+        f"batch_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json",
+    )
+    with open(filename, "w", encoding="utf-8") as handle:
+        json.dump(report, handle, indent=4, ensure_ascii=False)
+    return filename
+
+
+def print_batch_summary(report):
+    print(f"\n[일괄 분석 결과] 루트: {report['root_dir']}")
+    print(f"총 {report['total']}개 폴더\n")
+    for game in report["games"]:
+        deps = ", ".join(game["required_programs"])
+        print(f"  · {game['folder']}")
+        print(f"    엔진: {game['engine']}")
+        print(f"    필수: {deps}\n")
+
+
+def print_single_result(result):
+    print(f"\n[분석 결과] {result['folder']}")
+    print(f"■ 경로: {result['path']}")
+    print(f"■ 엔진: {result['engine']}")
+    print(f"■ 필수 설치: {', '.join(result['required_programs'])}")
+
+
+def run_single(path, results_dir="results", emit_json=True):
+    analyzer = GameAnalyzer(path)
+    analyzer.scan_files()
+    result = analyzer.to_result()
+    print_single_result(result)
+    saved = analyzer.save_report(results_dir)
+    if emit_json:
+        print("\n[JSON]")
+        print(json.dumps(result, indent=4, ensure_ascii=False))
+    return result, saved
+
+
+def run_batch(path, results_dir="results", emit_json=True):
+    report = scan_install_root(path, results_dir)
+    print_batch_summary(report)
+    saved = save_batch_report(report, results_dir)
+    print(f"\n[알림] 일괄 분석 보고서가 저장되었습니다: {saved}")
+    if emit_json:
+        print("\n[JSON]")
+        print(json.dumps(report, indent=4, ensure_ascii=False))
+    return report, saved
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(
+        description="게임 설치 폴더의 엔진 및 필수 런타임을 분석합니다.",
+    )
+    parser.add_argument(
+        "path",
+        nargs="?",
+        help="분석할 경로 (게임 1개 폴더 또는 설치 라이브러리 최상위 폴더)",
+    )
+    parser.add_argument(
+        "--batch",
+        action="store_true",
+        help="하위 폴더를 게임 단위로 일괄 분석",
+    )
+    parser.add_argument(
+        "--single",
+        action="store_true",
+        help="입력 경로 하나만 단일 게임으로 분석",
+    )
+    parser.add_argument(
+        "--output-dir",
+        default="results",
+        help="JSON 저장 폴더 (기본: results)",
+    )
+    parser.add_argument(
+        "--no-json-print",
+        action="store_true",
+        help="콘솔 JSON 출력 생략",
+    )
+    args = parser.parse_args(argv)
+
+    path = args.path or input("분석할 경로를 입력하세요: ").strip()
+    if not path:
+        print("[오류] 경로가 비어 있습니다.")
+        sys.exit(1)
+
+    path = os.path.abspath(path.strip().strip('"'))
+    emit_json = not args.no_json_print
+
+    try:
+        if args.batch or (not args.single and is_batch_root(path)):
+            run_batch(path, args.output_dir, emit_json)
+        else:
+            result = analyze_folder(path)
+            if result["detected"]:
+                run_single(path, args.output_dir, emit_json)
+            else:
+                print_single_result(result)
+                if emit_json:
+                    print("\n[JSON]")
+                    print(json.dumps(result, indent=4, ensure_ascii=False))
+                print("\n[알림] 엔진을 식별하지 못했습니다.")
+                sys.exit(1)
+    except FileNotFoundError as exc:
+        print(f"[오류] {exc}")
+        sys.exit(1)
+
 
 if __name__ == "__main__":
-    path = input("분석할 경로를 입력하세요: ")
-    analyzer = GameAnalyzer(path)
-    if analyzer.scan_files():
-        print(f"\n[분석 결과]\n■ 엔진: {analyzer.detected_engine}\n■ 필수 설치: {', '.join(analyzer.required_programs)}")
-        analyzer.save_report()
-    else: print("\n[알림] 엔진을 식별하지 못했습니다.")
+    main()

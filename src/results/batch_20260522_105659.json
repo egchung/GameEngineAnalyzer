@@ -1,0 +1,985 @@
+{
+    "timestamp": "2026-05-22 10:56:59",
+    "root_dir": "D:\\EG_ProgramFiles\\STOVE_v3\\Games",
+    "total": 99,
+    "games": [
+        {
+            "folder": "Absolute Tactics",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Absolute Tactics",
+            "engine": "Unreal Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX 11/12"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "All_About_Chopsticks",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\All_About_Chopsticks",
+            "engine": "Unreal Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX 11/12"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Artis",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Artis",
+            "engine": "RPG Maker (MV/MZ / NW.js)",
+            "required_programs": [
+                "글로벌 런타임 불필요"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Astellia_M",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Astellia_M",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "BlackHeart_ArtBook_SP",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\BlackHeart_ArtBook_SP",
+            "engine": "PubCoder (Interactive Ebook/App)",
+            "required_programs": [
+                "글로벌 런타임 불필요"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Book of Yog",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Book of Yog",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Cataclismo",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Cataclismo",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Catizens",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Catizens",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Cats Hidden in Italy",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Cats Hidden in Italy",
+            "engine": "Clickteam Fusion",
+            "required_programs": [
+                "글로벌 런타임 불필요"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Chronicon",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Chronicon",
+            "engine": "GameMaker Studio",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Company of Heroes 3",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Company of Heroes 3",
+            "engine": "Essence Engine 5.0 (Relic)",
+            "required_programs": [
+                "DirectX 12",
+                "VC++ 2019/2022"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "CritterCove",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\CritterCove",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Dawn of War 2",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Dawn of War 2",
+            "engine": "Essence Engine 5.0 (Relic)",
+            "required_programs": [
+                "DirectX 12",
+                "VC++ 2019/2022"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "DesertLegend",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\DesertLegend",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Destiny Is Dice Demo",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Destiny Is Dice Demo",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Dream magic will",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Dream magic will",
+            "engine": "Unreal Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX 11/12"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Dreamlike Love with Seira",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Dreamlike Love with Seira",
+            "engine": "Electron (Chromium App)",
+            "required_programs": [
+                "글로벌 런타임 불필요"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Dungeon Inn",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Dungeon Inn",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "ECHH - Deluxe",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\ECHH - Deluxe",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "EOA4",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\EOA4",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Escape the School",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Escape the School",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "EternalStrands",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\EternalStrands",
+            "engine": "Unreal Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX 11/12"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Exhausted Man",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Exhausted Man",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Exhausted Man Demo",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Exhausted Man Demo",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "FS2",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\FS2",
+            "engine": "Joycity Custom Engine",
+            "required_programs": [
+                "DirectX 9.0c",
+                "VC++ Redistributable"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Fly Corp",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Fly Corp",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Garden of Witches",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Garden of Witches",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Gensei Suikoden Plus",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Gensei Suikoden Plus",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Gensei Suikoden Plus Deluxe",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Gensei Suikoden Plus Deluxe",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Gone Viral",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Gone Viral",
+            "engine": "Unreal Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX 11/12"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Hayo and the Emporium_Demo",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Hayo and the Emporium_Demo",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Help the Cats_Demo",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Help the Cats_Demo",
+            "engine": "GameMaker Studio",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Help the Cats_Official",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Help the Cats_Official",
+            "engine": "GameMaker Studio",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "IfSunSets",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\IfSunSets",
+            "engine": "Unreal Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX 11/12"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Instant_Farmer",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Instant_Farmer",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "LoveDelivery DLC ArtBook",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\LoveDelivery DLC ArtBook",
+            "engine": "Unknown",
+            "required_programs": [
+                "확인 불가"
+            ],
+            "detected": false
+        },
+        {
+            "folder": "LumineNight",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\LumineNight",
+            "engine": "Unreal Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX 11/12"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Medicooker",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Medicooker",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Meta Ghost",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Meta Ghost",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Mistward",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Mistward",
+            "engine": "GameMaker Studio",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "MoveBalltoGreen",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\MoveBalltoGreen",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Murim Survival",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Murim Survival",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "NomadSurvival",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\NomadSurvival",
+            "engine": "GameMaker Studio",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Novice",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Novice",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "OldWorld",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\OldWorld",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Only10Level",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Only10Level",
+            "engine": "Unreal Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX 11/12"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Outerplane_Cosplay_Photobook",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Outerplane_Cosplay_Photobook",
+            "engine": "PubCoder (Interactive Ebook/App)",
+            "required_programs": [
+                "글로벌 런타임 불필요"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "PARRYMAN",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\PARRYMAN",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Peglin",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Peglin",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Realm of Ink",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Realm of Ink",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Reborn",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Reborn",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "RevueStarlight",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\RevueStarlight",
+            "engine": "KiriKiri (Z / TVP) Engine",
+            "required_programs": [
+                "VC++ 2010/2015-2022",
+                "DirectX 9.0c"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Rhythm Witch",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Rhythm Witch",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Riichi City X RZ COS Cosplay Digital Photobook",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Riichi City X RZ COS Cosplay Digital Photobook",
+            "engine": "RPG Maker (MV/MZ / NW.js)",
+            "required_programs": [
+                "글로벌 런타임 불필요"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "RiichiCity",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\RiichiCity",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "RogueJack21",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\RogueJack21",
+            "engine": "Godot Engine",
+            "required_programs": [
+                "글로벌 런타임 불필요"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "SFS The Gun-dog",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\SFS The Gun-dog",
+            "engine": "Ren'Py",
+            "required_programs": [
+                "VC++ 2015",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "SSGYuna",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\SSGYuna",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Sample",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Sample",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "SaniyangDemo",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\SaniyangDemo",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Sea Horizon",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Sea Horizon",
+            "engine": "Unreal Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX 11/12"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "SenrenBanka",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\SenrenBanka",
+            "engine": "KiriKiri (Z / TVP) Engine",
+            "required_programs": [
+                "VC++ 2010/2015-2022",
+                "DirectX 9.0c"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "ShotgunKing",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\ShotgunKing",
+            "engine": "PUNKCAKE Custom Engine",
+            "required_programs": [
+                "글로벌 런타임 불필요"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Sisters",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Sisters",
+            "engine": "ISM Engine",
+            "required_programs": [
+                "DirectX 9.0c",
+                "VC++ Redistributable"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Sohee_Demo",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Sohee_Demo",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "SoloBinggo",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\SoloBinggo",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Space Marine",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Space Marine",
+            "engine": "Phoenix Engine (Relic Custom)",
+            "required_programs": [
+                "DirectX 9.0c",
+                "VC++ 2008/2010"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Spinch",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Spinch",
+            "engine": "GameMaker Studio",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Stacklands",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Stacklands",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Staffer",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Staffer",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "SudokuZenkai",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\SudokuZenkai",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "SummerPochaDemo",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\SummerPochaDemo",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "TeleportMasterDemo",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\TeleportMasterDemo",
+            "engine": "GameMaker Studio",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "TeleportMasterMain",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\TeleportMasterMain",
+            "engine": "GameMaker Studio",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Terraformers",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Terraformers",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "The NOexistenceN of you AND me",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\The NOexistenceN of you AND me",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "The Pair Annihilation",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\The Pair Annihilation",
+            "engine": "Unreal Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX 11/12"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Three Kingdom：The Journey",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Three Kingdom：The Journey",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "TinyPasture",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\TinyPasture",
+            "engine": "Godot Engine",
+            "required_programs": [
+                "글로벌 런타임 불필요"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Tobor",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Tobor",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Trine",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Trine",
+            "engine": "Frozenbyte Engine",
+            "required_programs": [
+                "NVIDIA PhysX",
+                "VC++ 2010/2012/2015-2022"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Troubleshooter",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Troubleshooter",
+            "engine": "Ogre3D Engine",
+            "required_programs": [
+                "DirectX 9.0c",
+                "VC++ 2010/2012/2015"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "UnderTheBlueHorizon",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\UnderTheBlueHorizon",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "VolcanoPrincess",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\VolcanoPrincess",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Windrose",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Windrose",
+            "engine": "Unreal Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX 11/12"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "Windrose Demo",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\Windrose Demo",
+            "engine": "Unreal Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX 11/12"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "YOU and ME and HER - A Love Story",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\YOU and ME and HER - A Love Story",
+            "engine": "Nitroplus Engine",
+            "required_programs": [
+                "글로벌 런타임 불필요"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "camellia_flower",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\camellia_flower",
+            "engine": "Ren'Py",
+            "required_programs": [
+                "VC++ 2015",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "guigubahuang",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\guigubahuang",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "shanhelvtan",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\shanhelvtan",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "talesshop_herworld",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\talesshop_herworld",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "the T",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\the T",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "underaquarium",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\underaquarium",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "whoisnextDEMO",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\whoisnextDEMO",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "yourblight",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\yourblight",
+            "engine": "RPG Maker (MV/MZ / NW.js)",
+            "required_programs": [
+                "글로벌 런타임 불필요"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "가디언스톰",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\가디언스톰",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "이세계왕녀-워터파크에디션",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\이세계왕녀-워터파크에디션",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "이세계왕녀-호러하우스",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\이세계왕녀-호러하우스",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        },
+        {
+            "folder": "하모닉스",
+            "path": "D:\\EG_ProgramFiles\\STOVE_v3\\Games\\하모닉스",
+            "engine": "Unity Engine",
+            "required_programs": [
+                "VC++ 2015-2022",
+                "DirectX"
+            ],
+            "detected": true
+        }
+    ]
+}

@@ -3,7 +3,7 @@ import shutil
 import tempfile
 import unittest
 
-from enginecheck import GameAnalyzer
+from enginecheck import GameAnalyzer, analyze_folder, is_batch_root, scan_install_root
 
 
 def _touch(base, *paths):
@@ -95,6 +95,33 @@ class TestGameAnalyzer(unittest.TestCase):
     def test_clickteam_fusion_modules(self):
         analyzer = self.analyze("Modules/mmf2d3d8.dll", "Modules/kcmouse.mfx", "Modules/mmfs2.dll")
         self.assertEqual(analyzer.detected_engine, "Clickteam Fusion")
+
+    def test_is_batch_root(self):
+        lib = os.path.join(self.temp_dir, "Games")
+        os.makedirs(os.path.join(lib, "GameA"))
+        os.makedirs(os.path.join(lib, "GameB"))
+        self.assertTrue(is_batch_root(lib))
+
+        single = os.path.join(self.temp_dir, "Peglin")
+        os.makedirs(single)
+        open(os.path.join(single, "game.exe"), "a", encoding="utf-8").close()
+        os.makedirs(os.path.join(single, "Data"))
+        self.assertFalse(is_batch_root(single))
+
+    def test_scan_install_root(self):
+        lib = os.path.join(self.temp_dir, "Library")
+        g1 = os.path.join(lib, "Alpha")
+        g2 = os.path.join(lib, "Beta")
+        os.makedirs(g1)
+        os.makedirs(g2)
+        open(os.path.join(g1, "game.ini"), "a", encoding="utf-8").close()
+        open(os.path.join(g2, "unityplayer.dll"), "a", encoding="utf-8").close()
+
+        report = scan_install_root(lib)
+        self.assertEqual(report["total"], 2)
+        by_name = {g["folder"]: g["engine"] for g in report["games"]}
+        self.assertEqual(by_name["Alpha"], "RPG Maker (XP/VX/VX Ace)")
+        self.assertEqual(by_name["Beta"], "Unity Engine")
 
 
 if __name__ == "__main__":
