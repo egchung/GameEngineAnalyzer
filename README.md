@@ -5,7 +5,7 @@
 ## 🚀 주요 기능
 - **다양한 엔진 식별**: Unreal, Unity, RPG Maker, Ren'Py 등 주요 게임 엔진 탐지.
 - **필수 환경 가이드**: 식별된 엔진에 따라 필요한 런타임/라이브러리(DirectX, VC++ 등) 정보 출력.
-- **보고서 생성**: 분석 결과를 JSON 파일로 저장하여 체계적인 기록 관리.
+- **보고서 생성**: 분석 결과를 Markdown 파일로 저장하여 사람이 읽기 쉬운 기록 관리.
 - **오탐 방지 로직**: 엔진별 고유 패턴 및 우선순위 알고리즘을 통한 높은 정확도.
 
 ## 🛠 사용 방법
@@ -32,7 +32,8 @@ python src/enginecheck.py "D:\Games" --batch
 ```
 
 - 콘솔에 폴더명·엔진·필수 프로그램을 출력하고, JSON도 함께 표시합니다.
-- 일괄 분석 결과는 `results/batch_YYYYMMDD_HHMMSS.json`에 저장됩니다.
+- 단일 분석 결과는 `results/report_YYYYMMDD_HHMMSS.md`에 저장됩니다.
+- 일괄 분석 결과는 `results/batch_YYYYMMDD_HHMMSS.md`에 저장됩니다.
 
 ### 방법 2: 실행 파일(.exe) 사용 (권장)
 별도의 설치 과정 없이 즉시 실행 가능합니다.

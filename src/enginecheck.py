@@ -192,13 +192,25 @@ class GameAnalyzer:
 
     def save_report(self, results_dir="results"):
         os.makedirs(results_dir, exist_ok=True)
-        filename = os.path.join(results_dir, f"report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
-        payload = {
-            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            **self.to_result(),
-        }
+        filename = os.path.join(results_dir, f"report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md")
+        payload = self.to_result()
+        lines = [
+            "# 분석 보고서",
+            "",
+            f"- 생성 시각: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
+            f"- 폴더: {payload['folder']}",
+            f"- 경로: {payload['path']}",
+            f"- 엔진: {payload['engine']}",
+            f"- 감지 여부: {'예' if payload['detected'] else '아니오'}",
+            "",
+            "## 필수 설치",
+        ]
+        if payload["required_programs"]:
+            lines.extend(f"- {dep}" for dep in payload["required_programs"])
+        else:
+            lines.append("- 없음")
         with open(filename, "w", encoding="utf-8") as handle:
-            json.dump(payload, handle, indent=4, ensure_ascii=False)
+            handle.write("\n".join(lines))
         print(f"\n[알림] 분석 보고서가 저장되었습니다: {filename}")
         return filename
 
@@ -257,10 +269,28 @@ def save_batch_report(report, results_dir="results"):
     os.makedirs(results_dir, exist_ok=True)
     filename = os.path.join(
         results_dir,
-        f"batch_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json",
+        f"batch_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md",
     )
+    lines = [
+        "# 일괄 분석 보고서",
+        "",
+        f"- 생성 시각: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
+        f"- 루트: {report['root_dir']}",
+        f"- 총 폴더: {report['total']}",
+        "",
+        "## 게임 목록",
+    ]
+    for game in report["games"]:
+        lines.extend([
+            f"### {game['folder']}",
+            f"- 경로: {game['path']}",
+            f"- 엔진: {game['engine']}",
+            f"- 필수 설치: {', '.join(game['required_programs']) if game['required_programs'] else '없음'}",
+            f"- 감지됨: {'예' if game['detected'] else '아니오'}",
+            "",
+        ])
     with open(filename, "w", encoding="utf-8") as handle:
-        json.dump(report, handle, indent=4, ensure_ascii=False)
+        handle.write("\n".join(lines))
     return filename
 
 
